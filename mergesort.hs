@@ -1,5 +1,6 @@
 -- The idea here is that we split up this algorithm between a client and a server.
--- Here is the algorithm(stolen from): https://stackoverflow.com/questions/37082925/haskell-merge-sort
+-- Here is the standalone algorithm(stolen from): https://stackoverflow.com/questions/37082925/haskell-merge-sort
+-- Ours is a slight variation below:
 -- 1. The server invokes `halve` on some list of any kind resulting in two lists
 -- 2. It sends an HTTP post to each client with a half asynchronously.
 -- 3. When all responses come back the server calls `merge` which sorts the final list.
